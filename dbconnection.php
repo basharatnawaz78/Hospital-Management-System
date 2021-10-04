@@ -1,6 +1,10 @@
 <?php
 // Create connection
-$con=mysqli_connect("localhost","root","","onlinehospitalmanagementsystem");
+$host="localhost";
+$root="root";
+$pwd="";
+$db="onlinehospitalmanagementsystem";
+$con=mysqli_connect($host,$root,$pwd,$db);
 
 // Check connection
 if (mysqli_connect_errno($con))
