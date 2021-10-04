@@ -56,6 +56,7 @@ include("header.php");
     </div>
     <div class="clear"></div>
   </div>
+  <input type="hidden" class="form-control">
 </div>
 <?php
 include("footer.php");
