@@ -9,7 +9,7 @@ if(isset($_POST[submit]))
 			$sql ="UPDATE doctor SET doctorname='$_POST[doctorname]',mobileno='$_POST[mobilenumber]',departmentid='$_POST[select3]',loginid='$_POST[loginid]',password='$_POST[password]',status='$_POST[select]',education='$_POST[education]',experience='$_POST[experience]',consultancy_charge='$_POST[consultancy_charge]' WHERE doctorid='$_GET[editid]'";
 		if($qsql = mysqli_query($con,$sql))
 		{
-			echo "<script>alert('doctor record updated successfully...');</script>";
+			echo "<script>alert('Doctor's record updated successfully!');</script>";
 		}
 		else
 		{
@@ -21,7 +21,7 @@ if(isset($_POST[submit]))
 	$sql ="INSERT INTO doctor(doctorname,mobileno,departmentid,loginid,password,status,education,experience,consultancy_charge) values('$_POST[doctorname]','$_POST[mobilenumber]','$_POST[select3]','$_POST[loginid]','$_POST[password]','Active','$_POST[education]','$_POST[experience]','$_POST[consultancy_charge]')";
 	if($qsql = mysqli_query($con,$sql))
 	{
-		echo "<script>alert('Doctor record inserted successfully...');</script>";
+		echo "<script>alert('Doctor's record inserted successfully!');</script>";
 	}
 	else
 	{
@@ -48,7 +48,7 @@ if(isset($_GET[editid]))
   <div id="container">
     <h1>Add new Doctor record</h1>
     <form method="post" action="" name="frmdoct" onSubmit="return validateform()">
-    <table width="418" border="3">
+    <table width="419" border="4">
       <tbody>
         <tr>
           <td width="34%">Doctor Name</td>
@@ -125,7 +125,7 @@ if(isset($_GET[editid]))
           </select></td>
         </tr>
         <tr>
-          <td colspan="2" align="center"><input type="submit" name="submit" id="submit" value="Submit" /></td>
+          <td colspan="3" align="center"><input type="submit" name="submit" id="submit" value="Submit" /></td>
         </tr>
       </tbody>
     </table>
@@ -151,61 +151,61 @@ function validateform()
 {
 	if(document.frmdoct.doctorname.value == "")
 	{
-		alert("Doctor name should not be empty..");
+		alert("Doctor name should not be empty!");
 		document.frmdoct.doctorname.focus();
 		return false;
 	}
 	else if(!document.frmdoct.doctorname.value.match(alphaspaceExp))
 	{
-		alert("Doctor name not valid..");
+		alert("Doctor name not valid!");
 		document.frmdoct.doctorname.focus();
 		return false;
 	}
 	else if(document.frmdoct.mobilenumber.value == "")
 	{
-		alert("Mobile number should not be empty..");
+		alert("Mobile number should not be empty!");
 		document.frmdoct.mobilenumber.focus();
 		return false;
 	}
 	else if(!document.frmdoct.mobilenumber.value.match(numericExpression))
 	{
-		alert("Mobile number not valid..");
+		alert("Mobile number not valid!");
 		document.frmdoct.mobilenumber.focus();
 		return false;
 	}
 	else if(document.frmdoct.select3.value == "")
 	{
-		alert("Department ID should not be empty..");
+		alert("Department ID should not be empty!");
 		document.frmdoct.select3.focus();
 		return false;
 	}
 	else if(document.frmdoct.loginid.value == "")
 	{
-		alert("loginid should not be empty..");
+		alert("Login IDshould not be empty!");
 		document.frmdoct.loginid.focus();
 		return false;
 	}
 	else if(!document.frmdoct.loginid.value.match(alphanumericExp))
 	{
-		alert("loginid not valid..");
+		alert("Login ID not valid!");
 		document.frmdoct.loginid.focus();
 		return false;
 	}
 	else if(document.frmdoct.password.value == "")
 	{
-		alert("Password should not be empty..");
+		alert("Password field should not be empty!");
 		document.frmdoct.password.focus();
 		return false;
 	}
 	else if(document.frmdoct.password.value.length < 8)
 	{
-		alert("Password length should be more than 8 characters...");
+		alert("Password length should be more than 8 characters!");
 		document.frmdoct.password.focus();
 		return false;
 	}
 	else if(document.frmdoct.password.value != document.frmdoct.cnfirmpassword.value )
 	{
-		alert("Password and confirm password should be equal..");
+		alert("Password and confirm password should be same!");
 		document.frmdoct.password.focus();
 		return false;
 	}
@@ -217,25 +217,25 @@ function validateform()
 	}
 	else if(!document.frmdoct.education.value.match(alphaExp))
 	{
-		alert("Education not valid..");
+		alert("Education not valid!");
 		document.frmdoct.education.focus();
 		return false;
 	}
 	else if(document.frmdoct.experience.value == "")
 	{
-		alert("Experience should not be empty..");
+		alert("Experience must not be empty!");
 		document.frmdoct.experience.focus();
 		return false;
 	}
 	else if(!document.frmdoct.experience.value.match(numericExpression))
 	{
-		alert("Experience not valid..");
+		alert("Experience not valid!");
 		document.frmdoct.experience.focus();
 		return false;
 	}
 	else if(document.frmdoct.select.value == "" )
 	{
-		alert("Kindly select the status..");
+		alert("Please select the status!");
 		document.frmdoct.select.focus();
 		return false;
 	}
