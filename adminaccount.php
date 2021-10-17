@@ -31,7 +31,7 @@ include("headers.php");
 	echo mysqli_num_rows($qsql);
 	?>
     </h1>	
-    <h1>Number of Billing Reports : 
+    <h1> Billing Reports : 
     <?php
 	$sql = "SELECT * FROM billing WHERE billingid !='0'";
 	if(isset($_GET[date]))
@@ -43,7 +43,7 @@ include("headers.php");
 	?>
     </h1>
    
-    <h1>Number of Patient Records : 
+    <h1>Patient Records : 
     <?php
 	$sql = "SELECT * FROM patient WHERE status='Active'";
 	if(isset($_GET[date]))
@@ -120,14 +120,14 @@ include("headers.php");
 	echo mysqli_num_rows($qsql);
 	?>
     </h1>
- <h1>Number of Doctor Timings Records : 
+ <h1>Number of Doctor  : 
     <?php
 	$sql = "SELECT * FROM doctor_timings WHERE status='Active'";
 	$qsql = mysqli_query($con,$sql);
 	echo mysqli_num_rows($qsql);
 	?>
     </h1>
-    <h1>Number of Billing Records :
+    <h1> Billing Records :
     <?php
 	$sql = "SELECT * FROM billing_records WHERE status='Active'";
 	$qsql = mysqli_query($con,$sql);
