@@ -11,3 +11,6 @@ Create individual PR for each suggestion.
 
 ## License
 The Hospital Management System is open-sourced software licensed under the [MIT](https://choosealicense.com/licenses/mit/) license.
+
+## working
+this project usually manages all the task related to the hospital.
