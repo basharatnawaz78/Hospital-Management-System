@@ -50,12 +50,12 @@ if(isset($_GET[editid]))
 <div class="wrapper col2">
   <div id="breadcrumb">
     <ul>
-      <li class="first">Add New Patient</li></ul>
+      <li class="first">Add New Patient to the Directory</li></ul>
   </div>
 </div>
 <div class="wrapper col4">
   <div id="container">
-    <h1>Patient profile Registration Panel</h1>
+    <h1>Patient Profile Registration Panel</h1>
     <form method="post" action="" name="frmpatient" onSubmit="return validateform()">
     <table width="200" border="3">
       <tbody>
@@ -245,31 +245,31 @@ else if(!document.frmpatient.patientname.value.match(alphaspaceExp))
 	}
 	else if(document.frmpatient.loginid.value == "")
 	{
-		alert("Login ID should not be empty..");
+		alert("Login ID should not be empty");
 		document.frmpatient.loginid.focus();
 		return false;
 	}
 	else if(!document.frmpatient.loginid.value.match(alphanumericExp))
 	{
-		alert("Login ID not valid..");
+		alert("Login ID not valid.");
 		document.frmpatient.loginid.focus();
 		return false;
 	}
 	else if(document.frmpatient.password.value == "")
 	{
-		alert("Password should not be empty..");
+		alert("Password should not be empty");
 		document.frmpatient.password.focus();
 		return false;
 	}
 	else if(document.frmpatient.password.value.length < 8)
 	{
-		alert("Password length should be more than 8 characters...");
+		alert("Password length should be more than 8 characters");
 		document.frmpatient.password.focus();
 		return false;
 	}
 	else if(document.frmpatient.password.value != document.frmpatient.confirmpassword.value )
 	{
-		alert("Password and confirm password should be equal..");
+		alert("Password and confirm password should be equal");
 		document.frmpatient.confirmpassword.focus();
 		return false;
 	}
