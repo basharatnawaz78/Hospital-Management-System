@@ -9,7 +9,8 @@ if(isset($_POST[submit]))
 			$sql ="UPDATE admin SET adminname='$_POST[adminname]',loginid='$_POST[loginid]',password='$_POST[password]',status='$_POST[select]' WHERE adminid='$_GET[editid]'";
 		if($qsql = mysqli_query($con,$sql))
 		{
-			echo "<script>alert('admin record updated successfully...');</script>";
+			echo "<script>alert('Record Updated successfully...');</script>";
+			echo "<script>alert('Congratulations...');</script>";
 		}
 		else
 		{
